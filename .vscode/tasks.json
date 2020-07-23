@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc build active file",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-m32",
+                "-O2",
+                "-std=gnu11",
+                "-Wall",
+                "-Wno-unused-result",
+                "-Werror",
+                "-Wformat",
+                "-Wformat-overflow",
+                "-Wformat-security",
+                "-Wnull-dereference",
+                "-Wignored-qualifiers",
+                "-Wshift-negative-value",
+                "-Wswitch-default",
+                "-Wduplicated-branches",
+                "-Wduplicated-branches",
+                "-Wfloat-equal",
+                "-Wshadow",
+                "-Wpointer-arith",
+                "-Wpointer-compare",
+                "-Wtype-limits",
+                "-Wwrite-strings",
+                "-Wdangling-else",
+                "-Wempty-body",
+                "-Wlogical-op",
+                "-Wstrict-prototypes",
+                "-Wold-style-declaration",
+                "-Wold-style-definition",
+                "-Wmissing-parameter-type",
+                "-Wmissing-field-initializers",
+                "-Wnested-externs",
+                "-Wvla-larger-than=4096",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/prg",
+                "-lm"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
